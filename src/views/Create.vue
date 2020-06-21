@@ -1,7 +1,8 @@
 <template>
     <div>
         <div class="container mb-6 formulario">
-            <h1 class="is-size-3 my-6 pt-6 has-text-centered">Agrega tus productos</h1>
+            <h1 class="is-size-3 my-6 pt-6 has-text-centered">Agrega tus productos<i class="hoja1 mdi mdi-leaf"></i></h1> 
+            
             <div class="field is-horizontal">
                 <!-- NAME -->
                 <div class="field-label is-normal">
@@ -245,5 +246,9 @@ export default {
 <style lang="scss">
     .formulario {
         width: 60vw!important;
+    }
+    .hoja1{
+        color: black;
+        padding-left: 20px;
     }
 </style>

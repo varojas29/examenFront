@@ -1,6 +1,6 @@
 <template>
   <div id="app" class="is-family-sans-serif">
-    <navbar :brand="'The Urban Jungle.cl'"/>
+    <navbar :brand="'The Urban Jungle.cl'"/> 
     <router-view/>
       <div>
         <Footer></Footer>
@@ -20,3 +20,7 @@ export default {
   },
 }
 </script>
+
+<style lang="scss" scoped>
+
+</style>

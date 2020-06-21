@@ -5,7 +5,9 @@
     <img class="logofoot" src="/img/logo-negro-01.png" alt="">
   </div>
   <div class="footer">
-    <p>Copyright copy 2020,The Urban Jungle.cl </p>
+    <p>Copyright copy 2020,The Urban Jungle.cl <i class="instagram mdi mdi-instagram"></i> </p>
+    
+   
   </div>
   </div>
 </template>
@@ -28,5 +30,14 @@ p {
 
 .logofoot{
   height: 200px;
+}
+.compofoot {
+ display: flex;
+justify-content: space-between;
+}
+.instagram {
+  color: white;
+  font-size: 32px;
+  padding-left: 20px;
 }
 </style>
