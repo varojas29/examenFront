@@ -1,6 +1,7 @@
 <template>
   <div id="app" class="is-family-sans-serif">
     <navbar :brand="'The Urban Jungle.cl'"/>
+    <footer></footer>
     <router-view/>
   </div>
 </template>

@@ -1,17 +1,18 @@
 <template>
-  <footer>
-      {{footerText}}
-  </footer>
+ <div>
+    <footer>
+        <h1>{{mensaje}}</h1>
+    </footer>
+  </div>
 </template>
 
 <script>
 export default {
-    data(){
-        return {
-            footerText: 'Copyright TheUrbanJungle.cl ©'
-        }
+  data() {
+    return {
+        mensaje: 'hola'
     }
-
+   }
 }
 </script>
 

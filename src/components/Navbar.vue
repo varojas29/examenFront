@@ -15,7 +15,7 @@
             <!-- Shopping cart -->
             <a class="navbar-item" data-testId='cart' @click="showCart">
               <span class="icon">
-                <i class="mdi mdi-32px mdi-cart"></i>
+                <i class="mdi mdi-32px mdi-cart blanco"></i>
                 <span class="tag is-link" v-if="$store.getters.shoppingCart.list.length > 0">
                   {{ $store.getters.shoppingCart.list.length }}
                 </span>
@@ -24,16 +24,13 @@
             <!-- Login -->
             <router-link v-if="!isLoggedIn" to="/login" class="navbar-item"> Ingresa </router-link>
             <div v-else class="navbar-item has-dropdown is-hoverable">
-              <a class="navbar-link">
+              <a class="navbar-link blanco">
                   <span class="icon">
-                    <i class="mdi mdi-32px mdi-account"></i>
+                    <i class="mdi mdi-32px mdi-account blanco"></i>
                   </span>
                   {{ getCurrentUser ? getCurrentUser.email : ''}}
               </a>
               <div class="navbar-dropdown">
-                <a class="navbar-item">
-                  Preferencias
-                </a>
                 <a class="navbar-item" @click="showCart">
                   Ver Carrito
                 </a>
