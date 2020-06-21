@@ -103,14 +103,14 @@
                 <footer class="modal-card-foot">
                     <!-- CONFIRMATION -->
                     <div v-if="confirmation">
-                        <button class="button is-danger is-outlined" @click="deleteProduct">Sí</button>
-                        <button class="button is-danger is-outlined" @click="showModal=false">No</button>
+                        <button class="button is-black is-outlined" @click="deleteProduct">Sí</button>
+                        <button class="button is-black is-outlined" @click="showModal=false">No</button>
                     </div>
                     <!-- LOADING-->
-                    <progress v-if="loading" class="progress is-danger" max="100">60%</progress>
+                    <progress v-if="loading" class="progress is-black" max="100">60%</progress>
                     <!-- PRODUCT ADDED -->
                     <div v-if="productAdded">
-                        <button class="button is-danger is-outlined" @click="showModal=false">Seguir aquí</button>
+                        <button class="button is-success is-outlined" @click="showModal=false">Seguir aquí</button>
                         <router-link class="button is-black is-outlined" to="/home">Ir al inicio</router-link>
                     </div>
                 </footer>

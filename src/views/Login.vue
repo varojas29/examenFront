@@ -5,7 +5,7 @@
       <div class="column is-one-third">
         <div class="login-container card mt-9">
           <form>
-            <!--  Email -->
+            <!-- Field email -->
             <div class="field">
               <!-- Error -->
               <span v-if="formHasErrors" class="has-text-danger">
@@ -24,7 +24,7 @@
                 </span>
               </div>
             </div>
-            <!-- Password -->
+            <!-- Field password -->
             <div class="field">
               <label class="label">Contraseña</label>
               <div class="control has-icons-left has-icons-right">
@@ -36,7 +36,7 @@
                 </span>
               </div>
             </div>
-            <!-- Submit -->
+            <!-- field submit -->
             <div class="field">
               <button class="button is-black is-pulled-right" @click="login">Acceder</button>
             </div>
