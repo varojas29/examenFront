@@ -2,6 +2,9 @@
   <div id="app" class="is-family-sans-serif">
     <navbar :brand="'The Urban Jungle.cl'"/>
     <router-view/>
+      <div>
+        <Footer></Footer>
+      </div>
   </div>
 </template>
 
@@ -12,8 +15,8 @@ import Footer from '@/components/Footer.vue'
 export default {
   name: 'app',
   components: {
-    Navbar,
-    Footer
+    Footer,
+    Navbar
   },
 }
 </script>
