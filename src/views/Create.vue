@@ -4,7 +4,7 @@
             <h1 class="is-size-3 my-6 pt-6 has-text-centered">Agrega tus productos<i class="hoja1 mdi mdi-leaf"></i></h1> 
             
             <div class="field is-horizontal">
-                <!-- NAME -->
+                <!-- Nombre -->
                 <div class="field-label is-normal">
                     <label class="label">Nombre</label>
                 </div>
@@ -18,7 +18,7 @@
             </div>
 
             <div class="field is-horizontal">
-                <!-- IMAGE -->
+                <!-- Imagen -->
                 <div class="field-label is-normal">
                     <label class="label">Imagen</label>
                 </div>
@@ -32,7 +32,7 @@
             </div>
 
             <div class="field is-horizontal">
-                <!-- PRICE -->
+                <!-- PRicio -->
                 <div class="field-label is-normal">
                     <label class="label">Precio</label>
                 </div>
@@ -46,7 +46,7 @@
             </div>
 
             <div class="field is-horizontal">
-                <!-- DESCRIPTION -->
+                <!-- Desscripcion -->
                 <div class="field-label is-normal">
                     <label class="label">Descripción</label>
                 </div>
@@ -61,16 +61,16 @@
 
             <div class="has-text-right mb-6 mt-5">
                 <div class="my-5">
-                    <!-- ERROR -->
+                    <!-- Errror -->
                     <h6 class="has-text-danger" v-text="errorMsg"></h6>
                 </div>
-                <!-- BUTTON -->
+                <!-- Boton -->
                 <button class="button is-black is-outlined" v-if="edit" @click="updateProduct(id)">Actualizar</button>
                 <button class="button is-black" v-if="!edit" @click="createProduct(product.name)">Agregar</button>
             </div>
 
-            <!-- TABLE -->
-            <hr>
+            <!-- Tabla -->
+         <hr>
             <h1 class="mt-6 mb-5 is-size-3 has-text-centered">Productos registrados</h1>
             <table class="table">
                     <thead>
@@ -102,17 +102,17 @@
                 <!-- HEAD -->
                 <h1 class="is-size-4 modal-card-head" v-text="modalHead"></h1>
                 <footer class="modal-card-foot">
-                    <!-- CONFIRMATION -->
+                    <!-- CONFIRMACION -->
                     <div v-if="confirmation">
                         <button class="button is-black is-outlined" @click="deleteProduct">Sí</button>
                         <button class="button is-black is-outlined" @click="showModal=false">No</button>
                     </div>
                     <!-- LOADING-->
                     <progress v-if="loading" class="progress is-black" max="100">60%</progress>
-                    <!-- PRODUCT ADDED -->
-                    <div v-if="productAdded">
-                        <button class="button is-success is-outlined" @click="showModal=false">Seguir aquí</button>
-                        <router-link class="button is-black is-outlined" to="/home">Ir al inicio</router-link>
+                    <!-- PRODUCTO AÑADIDO -->
+      <div v-if="productAdded">
+         <button class="button is-success is-outlined" @click="showModal=false">Seguir aquí</button>
+                 <router-link class="button is-black is-outlined" to="/home">Ir al inicio</router-link>
                     </div>
                 </footer>
             </div>       
@@ -169,7 +169,7 @@ export default {
                     this.$store.dispatch('getProducts')
                 })
                 .catch(() => {
-                    this.errorMsg = '¡Ups! Algo salió mal. Intente más tarde.'
+                    this.errorMsg = '¡Upsi! Algo salió mal. Dale otra vez.'
                 })
             } else{
                 this.errorMsg = '* Todos los campos son obligatorios.'
@@ -187,7 +187,7 @@ export default {
             this.productAdded = false
             this.showModal = true
             this.confirmation = true
-            this.modalHead = `¿Estás seguro que quieres borrar ${name}?`
+            this.modalHead = `¿Estás seguro ${name}?`
             this.selected.name = name
             this.selected.id = id
         },
@@ -200,7 +200,7 @@ export default {
             .then(() => {
                 this.loading = false
                 this.productAdded = true
-                this.modalHead = 'Producto borrado exitosamente.'
+                this.modalHead = 'Producto borrado.'
                 this.$store.dispatch('getProducts')
             })
         },
@@ -227,7 +227,7 @@ export default {
                     this.updateEdit()
                 })
                 .catch(() => {
-                    this.errorMsg = '¡Ups! Algo salió mal. Intente más tarde.'
+                    this.errorMsg = '¡Upsi! Algo salió mal. Dale otra vez.'
                 })
         }
     },

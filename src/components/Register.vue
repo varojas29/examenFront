@@ -4,7 +4,7 @@
         <input type="email">
         <input type="password">
         <input type="checkbox" v-model="isAccepted">
-        <button type="submit" :class="{'is-disabled':!isAccepted}" @click='submitForm'>Registrar</button>
+        <button type="submit" :class="{'is-disabled':!isAccepted}" @click='submitForm'>Registrate</button>
     </div>
 </template>
 
@@ -17,7 +17,7 @@ export default {
     },
     methods: {
         submitForm(){
-            //Logic
+            
         }
     }
 }

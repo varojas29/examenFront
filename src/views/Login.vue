@@ -5,7 +5,7 @@
       <div class="column is-one-third">
         <div class="login-container card mt-9">
           <form>
-            <!-- Field email -->
+            <!-- Email -->
             <div class="field">
               <!-- Error -->
               <span v-if="formHasErrors" class="has-text-danger">
@@ -24,7 +24,7 @@
                 </span>
               </div>
             </div>
-            <!-- Field password -->
+            <!-- Password -->
             <div class="field">
               <label class="label">Contraseña</label>
               <div class="control has-icons-left has-icons-right">
@@ -36,7 +36,7 @@
                 </span>
               </div>
             </div>
-            <!-- field submit -->
+            <!-- Submit -->
             <div class="field">
               <button class="button is-black is-pulled-right" @click="login">Acceder</button>
             </div>
@@ -70,7 +70,7 @@ export default {
       e.preventDefault()
       this.formHasErrors = this.credentials.email === '' || this.credentials.password === ''
       if(!this.formHasErrors) {
-        // try login
+        // intentar login
         Firebase.auth()
                 .signInWithEmailAndPassword(
                   this.credentials.email,

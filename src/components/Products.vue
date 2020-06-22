@@ -12,19 +12,19 @@
 <div class="container">
 
 
-    <!-- Products -->
+    <!-- Productos -->
     <div class="columns is-multiline mt-5" id="products">
       <div class="column is-4" v-for="p in computedProductList" :key="p.id">
         
         <!-- Item -->
         <div class="card has-equal-height">
-          <!-- image -->
+          <!-- imagenes -->
           <div class="image-card">
             <div class="image has-spacing image">
               <img alt="product logo" :src="p.data.img">
             </div>
           </div>
-          <!-- content -->
+          <!-- CONTENIDO -->
           <div class="card-content">
             <div class="content">
               <!-- description -->

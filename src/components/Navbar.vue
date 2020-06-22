@@ -1,6 +1,6 @@
 <template>
   <nav class="navbar has-background-black is-fixed-top" role="navigation" aria-label="main navigation">    <div class="container">
-      <!-- Brand -->
+      <!-- Marca -->
       <div class="navbar-brand">
         <router-link to="/" class="navbar-item"><strong class="blanco">{{ brand }}</strong> <i class="hoja mdi mdi-leaf"></i></router-link>
         <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu"  :class="{'is-active': displayMenu}" @click="displayMenu = !displayMenu">
@@ -9,20 +9,21 @@
           <span aria-hidden="true"></span>
         </a>
       </div>
-      <!--  -->
+      <!-- MEnú activado-->
       <div id="navbarMenu" class="navbar-menu" :class="{'is-active': displayMenu}">
           <div class="navbar-end">
-            <!-- Shopping cart -->
+            <!-- CARRITO DE COMPRAS-->
             <a class="navbar-item" data-testId='cart' @click="showCart">
               <span class="icon blanco">
                 <i class="mdi mdi-32px mdi-cart"></i>
-                <span class=" blanco tag is-link" v-if="$store.getters.shoppingCart.list.length > 0">
+                <!--si, el getters es mayor a 0, muestra el valor-->
+                <span class=" blanco tag is-success" v-if="$store.getters.shoppingCart.list.length > 0">
                   {{ $store.getters.shoppingCart.list.length }}
                 </span>
               </span>
             </a>
             <!-- Login -->
-            <router-link v-if="!isLoggedIn" to="/login" class="navbar-item"> Ingresa </router-link>
+          <router-link v-if="!isLoggedIn" to="/login" class="navbar-item"> Ingresa </router-link>
             <div v-else class="navbar-item has-dropdown is-hoverable">
               <a class="navbar-link blanco">
                   <span class="icon blanco">
@@ -31,9 +32,7 @@
                   {{ getCurrentUser ? getCurrentUser.email : ''}}
               </a>
               <div class="navbar-dropdown">
-                <a class="navbar-item">
-                  Preferencias
-                </a>
+     
                 <a class="navbar-item" @click="showCart">
                   Ver Carrito
                 </a>
