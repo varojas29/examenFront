@@ -1,7 +1,7 @@
 <template>
     <div>
         <div data-testId="hello-component">{{msg}}</div>
-        <span>Síguenos en TikTok</span>
+        <span>Holiwis</span>
     </div>
 </template>
 
@@ -10,7 +10,7 @@ export default {
     props: {
         msg: {
             type: String,
-            default: 'Light, Camera, Laser!'
+            default: 'wajajaj'
         }
     }
 }

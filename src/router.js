@@ -36,6 +36,11 @@ const router = new Router({
       path: '/create',
       name: 'create',
       component: Create
+    },
+    {
+      path: '/*',
+      name: 'pageNotFound',
+      component: () => import(/* webpackChunkName: "login" */ './views/PageNotFound.vue')
     }
   ]
 })

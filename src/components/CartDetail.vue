@@ -14,16 +14,16 @@
               <div class="card">
                 <div class="card-content">
                   <div class="media">
-                    <!-- img -->
+                    <!-- IMAGEN -->
                     <div class="media-left">
                       <figure class="image is-48x48">
                         <img :src="p.data.img" alt="Placeholder image">
                       </figure>
                     </div>
-                    <!-- product -->
+                    <!-- PRODUCTOS -->
                     <div class="media-content">
                       <p class="title is-5">{{ p.data.name }}</p>
-                      <p class="subtitle is-6">$ {{ p.data.price * p.qty }}</p>
+                      <p class="subtitle is-6">$ {{ p.data.price * p.qt }}</p>
                     </div>
                     <p>
                       {{ p.qty }} x $ {{ p.data.price }} &nbsp;
@@ -40,7 +40,7 @@
           </ul>
         </div>
         <hr>
-        <!-- Total -->
+        <!-- TOTAL -->
         <div>
           <div>
             <div class="is-pulled-right">
@@ -55,7 +55,7 @@
             </div>
           </div>
         </div>
-        <!-- Content ... -->
+        <!-- Conteido-->
       </section>
       <footer class="modal-card-foot">
         <button class="button is-black" @click="showModal=false">Volver</button>
