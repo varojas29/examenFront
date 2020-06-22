@@ -34,10 +34,8 @@ npm run test:e2e
 This was my guide [Configuration Reference](https://www.udemy.com/course/curso-vue/learn/lecture/12756743).
 
 ### Don't Forget to commit!
-git commit -m"name_prroject"
-```
 
-#### Customize configuration
+### Customize configuration
 If you have any doubt, see [Configuration Reference](https://cli.vuejs.org/config/).
 
 
