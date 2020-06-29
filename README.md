@@ -7,7 +7,7 @@
 #### To run this proyect, please follow this instructions
 
 #### Click here
-[Configuration Reference](https://project-367345189914459242.web.app/).
+[Link proyect](https://project-367345189914459242.web.app/).
 
 
 ### To install dependencies
